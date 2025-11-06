@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BigJuu Tech | Modern Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise-layer"></div>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">
+          <span class="brand__badge">Portfolio</span>
+          <h1>BigJuu Tech</h1>
+        </div>
+        <nav class="site-nav" aria-label="Primary Navigation">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="navLinks">
+            <span></span><span></span><span></span>
+          </button>
+          <ul id="navLinks">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero section">
+        <div class="container hero__content">
+          <div class="hero__badge reveal">
+            <span>Creative Technologist</span>
+          </div>
+          <h2 class="hero__title reveal">
+            Crafting immersive digital experiences that bridge technology with art.
+          </h2>
+          <p class="hero__subtitle reveal">
+            I'm BigJuu Tech, a modern web developer focused on building high-performing interfaces and unforgettable brand stories.
+          </p>
+          <div class="hero__actions reveal">
+            <a class="button button--primary" href="#projects">View Projects</a>
+            <a class="button button--ghost" href="#contact">Let's Collaborate</a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="orb orb--primary"></div>
+          <div class="orb orb--secondary"></div>
+          <div class="orb orb--tertiary"></div>
+        </div>
+      </section>
+
+      <section id="about" class="section section--split">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="eyebrow">About</span>
+            <h3>Human-centered design backed by technical precision.</h3>
+          </div>
+          <div class="section__grid">
+            <p class="reveal">
+              With a passion for the intersection of creativity and code, I architect experiences that resonate across devices. From interactive brand sites to data-rich dashboards, I deliver fluid interactions and seamless user journeys.
+            </p>
+            <ul class="stats reveal">
+              <li>
+                <span class="stats__number">7+</span>
+                <span class="stats__label">Years building web experiences</span>
+              </li>
+              <li>
+                <span class="stats__number">50+</span>
+                <span class="stats__label">Successful client launches</span>
+              </li>
+              <li>
+                <span class="stats__number">12</span>
+                <span class="stats__label">Awards for design excellence</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section section--accent">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="eyebrow">Services</span>
+            <h3>Full-spectrum digital capabilities for modern brands.</h3>
+          </div>
+          <div class="cards">
+            <article class="card reveal">
+              <h4>Experience Design</h4>
+              <p>
+                UX strategy and interface design that center users while advancing business goals. Prototyped and validated for conversion.
+              </p>
+              <ul>
+                <li>Persona-driven journeys</li>
+                <li>Motion-first wireframes</li>
+                <li>Rapid usability testing</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <h4>Front-end Engineering</h4>
+              <p>
+                Performance-tuned web builds leveraging modern frameworks, modular architectures, and future-ready tooling.
+              </p>
+              <ul>
+                <li>React, Next.js, Astro</li>
+                <li>Design systems & accessibility</li>
+                <li>Progressive enhancement</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <h4>Interaction & Motion</h4>
+              <p>
+                Immersive animations and micro-interactions that enhance storytelling without compromising speed or usability.
+              </p>
+              <ul>
+                <li>Scroll-triggered narratives</li>
+                <li>3D & WebGL integration</li>
+                <li>Advanced Lottie workflows</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="eyebrow">Featured Work</span>
+            <h3>Selected projects that push boundaries.</h3>
+          </div>
+          <div class="project-grid">
+            <article class="project-tile reveal">
+              <div class="project-tile__image" aria-hidden="true"></div>
+              <div class="project-tile__content">
+                <h4>NeonVerse Labs</h4>
+                <p>
+                  Multi-dimensional launch experience blending immersive visuals, interactive storytelling, and data visualization.
+                </p>
+                <span class="project-tile__tag">Experience Platform</span>
+              </div>
+            </article>
+            <article class="project-tile reveal">
+              <div class="project-tile__image" aria-hidden="true"></div>
+              <div class="project-tile__content">
+                <h4>Pulse Analytics</h4>
+                <p>
+                  Enterprise-grade analytics suite redefined with responsive dashboards, real-time insights, and custom theming.
+                </p>
+                <span class="project-tile__tag">Product Design</span>
+              </div>
+            </article>
+            <article class="project-tile reveal">
+              <div class="project-tile__image" aria-hidden="true"></div>
+              <div class="project-tile__content">
+                <h4>Echo Studio</h4>
+                <p>
+                  Award-winning creative studio site with cinematic transitions, dynamic content modules, and editorial layouts.
+                </p>
+                <span class="project-tile__tag">Creative Site</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section section--overlay">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="eyebrow">Testimonials</span>
+            <h3>Partners who trusted the craft.</h3>
+          </div>
+          <div class="testimonials">
+            <figure class="testimonial reveal">
+              <blockquote>
+                “BigJuu translated our abstract ideas into a launch campaign that felt alive. Their attention to motion and detail was unbelievable.”
+              </blockquote>
+              <figcaption>— Maya Collins, Creative Director at NeonVerse</figcaption>
+            </figure>
+            <figure class="testimonial reveal">
+              <blockquote>
+                “From strategy to deployment, every interaction felt intentional. The result is a product our customers rave about.”
+              </blockquote>
+              <figcaption>— Elias Parker, CTO at Pulse Analytics</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--cta">
+        <div class="container">
+          <div class="cta reveal">
+            <h3>Ready to build something groundbreaking?</h3>
+            <p>
+              Let's collaborate on digital experiences that captivate audiences and drive results.
+            </p>
+            <a class="button button--primary" href="mailto:hello@bigjuutech.com">hello@bigjuutech.com</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="currentYear"></span> BigJuu Tech. All rights reserved.</p>
+        <div class="socials">
+          <a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble</a>
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cursor"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
