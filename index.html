@@ -5,31 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="BigJuu Tech is a modern digital creator delivering immersive web experiences, product design, and tech leadership."
+      content="BigJuu Tech is a creative technologist in Accra delivering animated digital products across automation, design, and AI."
     />
-    <title>BigJuu Tech | Modern Portfolio</title>
+    <meta name="author" content="BigJuu Tech" />
+    <title>BigJuu Tech · Animated Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIhPqJXQCRa9uc58gTT7F2Q2KX1C1xdcYVYhD+XG3w0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="noise-overlay" aria-hidden="true"></div>
-    <div class="aurora" aria-hidden="true"></div>
+    <div class="backdrop" aria-hidden="true">
+      <div class="backdrop__gradient"></div>
+      <div class="blob blob--one"></div>
+      <div class="blob blob--two"></div>
+      <div class="blob blob--three"></div>
+    </div>
 
-    <header class="site-header" data-nav>
-      <div class="container">
-        <a href="#hero" class="logo" aria-label="BigJuu Tech Home">
+    <header class="site-header" data-header>
+      <div class="container header__inner">
+        <a class="logo" href="#hero" aria-label="BigJuu Tech home">
           <span class="logo__mark">BT</span>
           <span class="logo__text">BigJuu Tech</span>
         </a>
@@ -39,295 +37,216 @@
           <span class="nav-toggle__bar"></span>
           <span class="sr-only">Toggle navigation</span>
         </button>
-        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" data-nav-link>About</a></li>
+            <li><a href="#projects" data-nav-link>Projects</a></li>
+            <li><a href="#services" data-nav-link>Services</a></li>
+            <li><a href="#contact" data-nav-link>Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <section id="hero" class="hero section">
-        <div class="container">
-          <div class="hero__content" data-animate>
-            <span class="hero__eyebrow">Digital Visionary</span>
-            <h1>
-              BigJuu Tech crafts
-              <span class="text-gradient">immersive experiences</span>
-              that accelerate bold products.
-            </h1>
-            <p>
-              I am a multi-disciplinary developer blending design intuition with technical
-              precision to ship modern, animated, and accessible websites. Let’s turn your next big
-              idea into reality.
+      <section id="hero" class="hero section" data-section>
+        <div class="container hero__grid">
+          <div class="hero__content" data-reveal>
+            <span class="hero__tag">Accra • Ghana</span>
+            <h1 class="hero__title">BigJuu Tech</h1>
+            <p class="hero__lead">
+              Building immersive automation-ready products with a love for motion, storytelling, and
+              accessible design systems.
+            </p>
+            <p class="hero__typed" aria-live="polite">
+              <span class="hero__typed-label">Focus:</span>
+              <span id="typed-output">Tech</span>
             </p>
             <div class="hero__actions">
-              <a class="button button--primary" href="#projects">View Projects</a>
-              <a class="button button--ghost" href="#contact">Start a Project</a>
+              <a class="button button--primary" href="#projects">See my work</a>
+              <a class="button button--ghost" href="#contact">Hire me</a>
             </div>
-            <ul class="hero__stats">
-              <li>
-                <strong>5+</strong>
-                <span>Years building digital products</span>
-              </li>
-              <li>
-                <strong>30+</strong>
-                <span>Successfully launched projects</span>
-              </li>
-              <li>
-                <strong>10k+</strong>
-                <span>Users impacted globally</span>
-              </li>
-            </ul>
           </div>
-          <div class="hero__visual" data-animate>
-            <div class="floating-card">
-              <p class="floating-card__title">Next-gen Stack</p>
-              <div class="floating-card__stack">
-                <span>React</span>
-                <span>TypeScript</span>
-                <span>GSAP</span>
-                <span>Framer</span>
-              </div>
+          <aside class="hero-card" data-reveal data-reveal-delay="120">
+            <div class="hero-card__avatar" aria-hidden="true">BT</div>
+            <div class="hero-card__body">
+              <p class="hero-card__tagline">Creative Technologist · Motion-first Interfaces</p>
+              <ul class="hero-card__skills">
+                <li>Automation Playbooks</li>
+                <li>Motion Systems</li>
+                <li>AI-driven Content</li>
+              </ul>
             </div>
-            <div class="floating-card floating-card--secondary">
-              <p class="floating-card__meta">Latest Release</p>
-              <h3>Aurora Commerce</h3>
-              <p>Interactive shopping experience with real-time personalization.</p>
-            </div>
-            <div class="orb orb--one"></div>
-            <div class="orb orb--two"></div>
-          </div>
+          </aside>
         </div>
       </section>
 
-      <section id="about" class="about section" data-animate>
+      <section id="about" class="about section" data-section>
         <div class="container split">
-          <div class="split__primary">
+          <div class="split__primary" data-reveal>
             <h2 class="section-title">About</h2>
             <p>
-              BigJuu Tech is a product-focused creator merging interface design, animation, and
-              engineering. From rapid prototypes to production-ready systems, I build experiences
-              that feel alive, performant, and inclusive.
+              I’m BigJuu Tech, a creative developer based in Accra, Ghana. I combine strategy, visual
+              design, and engineering to craft fluid, animated experiences for brands embracing
+              emerging technology. From rapid product experiments to robust platforms, my focus is on
+              momentum, clarity, and measurable outcomes.
             </p>
           </div>
-          <div class="split__secondary">
-            <ul class="bullet-grid">
-              <li><i class="fa-solid fa-sparkles"></i> Motion-driven storytelling</li>
-              <li><i class="fa-solid fa-arrows-spin"></i> Component systems at scale</li>
-              <li><i class="fa-solid fa-chart-line"></i> Data-informed UX decisions</li>
-              <li><i class="fa-solid fa-shield"></i> Secure, cloud-native delivery</li>
-            </ul>
+          <div class="split__secondary" data-reveal data-reveal-delay="120">
+            <dl class="about__facts">
+              <div>
+                <dt>Core themes</dt>
+                <dd>Tech leadership, automation, design systems, AI enablement.</dd>
+              </div>
+              <div>
+                <dt>Trusted for</dt>
+                <dd>High-touch storytelling, motion prototyping, launch readiness.</dd>
+              </div>
+              <div>
+                <dt>Collaboration style</dt>
+                <dd>Transparent sprints, async-first workflows, inclusive facilitation.</dd>
+              </div>
+            </dl>
           </div>
         </div>
       </section>
 
-      <section id="services" class="services section" data-animate>
-        <div class="container">
-          <div class="section-heading">
-            <h2 class="section-title">Capabilities</h2>
-            <p>Full-spectrum partnership from concept to launch with measurable impact.</p>
-          </div>
-          <div class="services__grid">
-            <article class="card service-card">
-              <div class="card__icon">
-                <i class="fa-solid fa-bolt"></i>
-              </div>
-              <h3>Interactive Experiences</h3>
-              <p>
-                Craft performant SPAs with fluid animations, advanced micro-interactions, and
-                compelling narratives that keep users engaged.
-              </p>
-            </article>
-            <article class="card service-card">
-              <div class="card__icon">
-                <i class="fa-solid fa-cubes"></i>
-              </div>
-              <h3>Design Systems</h3>
-              <p>
-                Define reusable component libraries, scalable tokens, and documentation for product
-                teams to move faster with consistency.
-              </p>
-            </article>
-            <article class="card service-card">
-              <div class="card__icon">
-                <i class="fa-solid fa-rocket"></i>
-              </div>
-              <h3>Launch Strategy</h3>
-              <p>
-                Support go-to-market with performance audits, analytics setups, and continuous
-                optimization to maximize conversions.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="projects section" data-animate>
-        <div class="container">
-          <div class="section-heading">
-            <h2 class="section-title">Selected Work</h2>
-            <p>Immersive journeys that fuse brand, motion, and engineering excellence.</p>
-          </div>
+      <section id="projects" class="projects section" data-section>
+        <div class="container" data-reveal>
+          <header class="section-heading">
+            <h2 class="section-title">Projects</h2>
+            <p>Animated case studies that blend automation, narrative UX, and measurable change.</p>
+          </header>
           <div class="projects__grid">
-            <article class="project-card">
-              <div class="project-card__meta">
-                <span class="tag">E-Commerce</span>
-                <span class="tag">WebGL</span>
+            <article
+              class="project-card"
+              data-project
+              data-title="NurseChat"
+              data-description="Collaborative chat and spaced-repetition flashcards for nursing students with real-time sync."
+              data-tech="React · Firebase"
+              data-reveal
+            >
+              <div class="project-card__inner">
+                <div class="project-card__header">
+                  <span class="project-card__pill">Healthcare</span>
+                  <span class="project-card__pill project-card__pill--accent">Team Learning</span>
+                </div>
+                <h3>NurseChat</h3>
+                <p>Collaborative chat + flashcards for nursing students.</p>
+                <div class="project-card__extra" aria-hidden="true">
+                  <span>React · Firebase workflow automation</span>
+                </div>
+                <button class="project-card__cta" type="button">More details</button>
               </div>
-              <h3>Aurora Commerce</h3>
-              <p>
-                Built a 3D-enabled shopping experience with adaptive storytelling and stateful
-                animations, increasing dwell time by 45%.
-              </p>
-              <a href="#contact" class="project-card__link">Request a walkthrough</a>
             </article>
-            <article class="project-card">
-              <div class="project-card__meta">
-                <span class="tag">FinTech</span>
-                <span class="tag">Realtime Data</span>
-              </div>
-              <h3>Pulse Analytics</h3>
-              <p>
-                Designed and engineered a live data visualization suite with predictive insights and
-                intuitive motion states for complex workflows.
-              </p>
-              <a href="#contact" class="project-card__link">View the playbook</a>
-            </article>
-            <article class="project-card">
-              <div class="project-card__meta">
-                <span class="tag">SaaS</span>
-                <span class="tag">AI</span>
-              </div>
-              <h3>Nova Ops</h3>
-              <p>
-                Delivered an AI-assisted operations platform with narrative onboarding and delightful
-                micro-interactions leading to 60% faster adoption.
-              </p>
-              <a href="#contact" class="project-card__link">Explore case study</a>
-            </article>
-          </div>
-        </div>
-      </section>
 
-      <section id="experience" class="experience section" data-animate>
-        <div class="container">
-          <div class="section-heading">
-            <h2 class="section-title">Experience</h2>
-            <p>Partnering with visionary teams to ship brave ideas.</p>
-          </div>
-          <div class="timeline">
-            <article class="timeline__item">
-              <div class="timeline__dot"></div>
-              <div class="timeline__content">
-                <h3>Principal Creative Technologist · Flux Labs</h3>
-                <span class="timeline__date">2022 — Present</span>
-                <p>
-                  Leading cross-functional product squads delivering experimental web experiences for
-                  high-growth startups and global brands.
-                </p>
+            <article
+              class="project-card"
+              data-project
+              data-title="Cropmac Website"
+              data-description="A responsive company site with service flows, booking automation, and conversion insights."
+              data-tech="PHP · HTML/CSS"
+              data-reveal
+              data-reveal-delay="80"
+            >
+              <div class="project-card__inner">
+                <div class="project-card__header">
+                  <span class="project-card__pill">AgroTech</span>
+                  <span class="project-card__pill project-card__pill--accent">Growth</span>
+                </div>
+                <h3>Cropmac Website</h3>
+                <p>Company site with services &amp; streamlined booking flows.</p>
+                <div class="project-card__extra" aria-hidden="true">
+                  <span>PHP · HTML/CSS · Booking automations</span>
+                </div>
+                <button class="project-card__cta" type="button">More details</button>
               </div>
             </article>
-            <article class="timeline__item">
-              <div class="timeline__dot"></div>
-              <div class="timeline__content">
-                <h3>Senior Frontend Engineer · Neon Wave</h3>
-                <span class="timeline__date">2019 — 2022</span>
-                <p>
-                  Architected design systems, performance pipelines, and animation frameworks for a
-                  suite of consumer apps reaching 5M+ users.
-                </p>
-              </div>
-            </article>
-            <article class="timeline__item">
-              <div class="timeline__dot"></div>
-              <div class="timeline__content">
-                <h3>Product Designer & Engineer · Freelance</h3>
-                <span class="timeline__date">2016 — 2019</span>
-                <p>
-                  Shipped bespoke products for agencies and founders, blending UX research, visual
-                  design, and full-stack development.
-                </p>
+
+            <article
+              class="project-card"
+              data-project
+              data-title="Digital Mind"
+              data-description="Faceless YouTube channel visuals and script engine delivering tech & AI tips at scale."
+              data-tech="Content · Automation"
+              data-reveal
+              data-reveal-delay="140"
+            >
+              <div class="project-card__inner">
+                <div class="project-card__header">
+                  <span class="project-card__pill">Media</span>
+                  <span class="project-card__pill project-card__pill--accent">Automation</span>
+                </div>
+                <h3>Digital Mind</h3>
+                <p>Visual storytelling for tech &amp; AI tips.</p>
+                <div class="project-card__extra" aria-hidden="true">
+                  <span>Content engines · Automation stacks</span>
+                </div>
+                <button class="project-card__cta" type="button">More details</button>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="testimonials section" data-animate>
-        <div class="container">
-          <div class="section-heading">
-            <h2 class="section-title">Client Voices</h2>
-            <p>Trusted partners amplifying the stories behind ambitious products.</p>
-          </div>
-          <div class="testimonials__grid">
-            <article class="card testimonial-card">
-              <p>
-                “BigJuu Tech translated our complex FinTech vision into an experience that feels
-                effortless. The motion work created tangible trust with our users.”
-              </p>
-              <span class="testimonial-card__author">— Maya Chen, CEO · Pulse Analytics</span>
+      <section id="services" class="services section" data-section>
+        <div class="container" data-reveal>
+          <header class="section-heading">
+            <h2 class="section-title">Services</h2>
+            <p>Flexible engagements from concept to launch, tuned for momentum.</p>
+          </header>
+          <div class="services__grid">
+            <article class="service-card">
+              <h3>Motion Product Design</h3>
+              <p>Micro-interaction systems, prototyping, and motion specs that turn ideas into feel-first experiences.</p>
             </article>
-            <article class="card testimonial-card">
-              <p>
-                “From discovery to launch, the collaboration was seamless. We saw engagement climb
-                within days thanks to the immersive product storytelling.”
-              </p>
-              <span class="testimonial-card__author">— Leo Ortiz, Founder · Aurora Commerce</span>
+            <article class="service-card">
+              <h3>Automation Pipelines</h3>
+              <p>Workflow design and no-code/low-code automation that keeps teams shipping faster with confidence.</p>
+            </article>
+            <article class="service-card">
+              <h3>AI Content Systems</h3>
+              <p>Data-backed storytelling engines, faceless channel ops, and adaptive content for modern audiences.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="contact section" data-animate>
+      <section id="contact" class="contact section" data-section>
         <div class="container split">
-          <div class="split__primary">
-            <h2 class="section-title">Let’s Build</h2>
+          <div class="split__primary" data-reveal>
+            <h2 class="section-title">Let’s collaborate</h2>
             <p>
-              Tell me about your product, pitch deck, or wild idea. I’ll respond within two days with
-              next steps and a tailored collaboration plan.
+              Ready to ship something ambitious? Share your goals and I’ll respond within two days with
+              next steps, timelines, and a tailored roadmap.
             </p>
-            <div class="contact__meta">
-              <a href="mailto:hello@bigjuutech.com" class="contact__link">
-                <i class="fa-solid fa-envelope"></i>
-                hello@bigjuutech.com
-              </a>
-              <a href="https://www.linkedin.com" class="contact__link" target="_blank" rel="noreferrer">
-                <i class="fa-brands fa-linkedin"></i>
-                LinkedIn
-              </a>
-              <a href="https://github.com" class="contact__link" target="_blank" rel="noreferrer">
-                <i class="fa-brands fa-github"></i>
-                GitHub
-              </a>
-            </div>
+            <ul class="contact__meta">
+              <li>
+                <span>Email</span>
+                <a href="mailto:you@example.com">you@example.com</a>
+              </li>
+              <li>
+                <span>Location</span>
+                <p>Accra, Ghana · Remote-friendly</p>
+              </li>
+            </ul>
+            <button class="button button--ghost" type="button" id="download-readme">Download README</button>
           </div>
-          <div class="split__secondary">
+          <div class="split__secondary" data-reveal data-reveal-delay="120">
             <form class="contact__form" autocomplete="off">
               <div class="field">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required />
+                <input id="name" name="name" type="text" placeholder="Your name" required />
               </div>
               <div class="field">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
               </div>
               <div class="field">
-                <label for="project">Project Vision</label>
-                <textarea
-                  id="project"
-                  name="project"
-                  rows="4"
-                  placeholder="Share goals, timeline, and desired outcomes"
-                  required
-                ></textarea>
+                <label for="message">Project details</label>
+                <textarea id="message" name="message" rows="4" placeholder="Goals, timeline, dream outcome" required></textarea>
               </div>
-              <button type="submit" class="button button--primary">Request Partnership</button>
+              <button class="button button--primary" type="submit">Start a project</button>
             </form>
           </div>
         </div>
@@ -335,14 +254,23 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>© <span data-year></span> BigJuu Tech. Crafted with purpose &amp; motion.</p>
-        <button class="scroll-top" type="button" aria-label="Back to top">
-          <i class="fa-solid fa-arrow-up"></i>
-        </button>
+      <div class="container site-footer__inner">
+        <p>© <span data-year></span> BigJuu Tech. Motion with intent.</p>
+        <a class="footer-link" href="#hero">Back to top</a>
       </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal__overlay" data-modal-close></div>
+      <div class="modal__content" role="document">
+        <button class="modal__close" type="button" aria-label="Close project details" data-modal-close>&times;</button>
+        <h3 id="modal-title">Project</h3>
+        <p id="modal-description"></p>
+        <p class="modal__tech" id="modal-tech"></p>
+        <button class="button button--ghost" type="button" data-modal-close>Close</button>
+      </div>
+    </div>
+
+    <script src="app.js" defer></script>
   </body>
 </html>
