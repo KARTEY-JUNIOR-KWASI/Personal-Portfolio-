@@ -1,11 +1,213 @@
 /* ========================================
-   BIGJUU TECH PORTFOLIO - JAVASCRIPT
-   Vanilla JS with modern features
+   BIGJUU TECH PORTFOLIO - ENHANCED JAVASCRIPT
+   All 10 projects + advanced features
    ======================================== */
 
 // ========================================
+// PROJECT DATA - All 10 Projects
+// ========================================
+const allProjects = [
+    {
+        id: 'nursechat',
+        title: 'NurseChat',
+        category: 'Healthcare • Education',
+        filter: 'web',
+        icon: 'fas fa-comments-medical',
+        description: 'Collaborative chat platform with integrated flashcards for nursing students to study and communicate effectively.',
+        fullDescription: 'NurseChat is a comprehensive collaborative platform designed specifically for nursing students. It combines real-time chat functionality with an integrated flashcard system to enhance learning and communication.',
+        features: [
+            'Real-time messaging with WebSocket technology',
+            'Interactive flashcard system for study sessions',
+            'Group chat rooms for different nursing topics',
+            'Progress tracking and study analytics',
+            'Mobile-responsive design for on-the-go learning'
+        ],
+        technologies: ['React', 'Firebase', 'WebSocket', 'Material-UI', 'Redux'],
+        link: '#',
+        github: '#'
+    },
+    {
+        id: 'cropmac',
+        title: 'Cropmac Website',
+        category: 'Business • E-commerce',
+        filter: 'web',
+        icon: 'fas fa-globe',
+        description: 'Professional company website with integrated booking flows and comprehensive service showcase.',
+        fullDescription: 'A modern, professional company website for Cropmac featuring comprehensive service showcases, integrated booking flows, and an intuitive user experience.',
+        features: [
+            'Service catalog with detailed descriptions',
+            'Integrated booking and appointment system',
+            'Admin dashboard for managing bookings',
+            'Responsive design across all devices',
+            'SEO-optimized content and structure'
+        ],
+        technologies: ['PHP', 'HTML5', 'CSS3', 'JavaScript', 'MySQL'],
+        link: '#',
+        github: '#'
+    },
+    {
+        id: 'digitalmind',
+        title: 'Digital Mind',
+        category: 'Content • YouTube',
+        filter: 'content',
+        icon: 'fas fa-brain',
+        description: 'Faceless YouTube channel creating engaging tech and AI content with automated script generation and visuals.',
+        fullDescription: 'Digital Mind is a faceless YouTube channel focused on delivering high-quality tech and AI content. The project involves automated script generation, visual creation, and content optimization.',
+        features: [
+            'Automated script generation using AI',
+            'Custom visual design for faceless content',
+            'SEO-optimized video titles and descriptions',
+            'Consistent content scheduling and publishing',
+            'Analytics tracking and performance optimization'
+        ],
+        technologies: ['Content Creation', 'AI/GPT', 'Video Editing', 'Automation Tools', 'Python'],
+        link: '#',
+        github: '#'
+    },
+    {
+        id: 'ecommerce',
+        title: 'ShopHub E-Commerce',
+        category: 'E-commerce • Retail',
+        filter: 'web',
+        icon: 'fas fa-shopping-cart',
+        description: 'Full-featured e-commerce platform with payment processing, inventory management, and admin dashboard.',
+        fullDescription: 'A complete e-commerce solution with advanced features including payment gateway integration, real-time inventory tracking, and comprehensive admin controls.',
+        features: [
+            'Secure payment processing with Stripe integration',
+            'Real-time inventory management',
+            'Customer account and order tracking',
+            'Product search and filtering',
+            'Admin dashboard with analytics'
+        ],
+        technologies: ['React', 'Node.js', 'MongoDB', 'Stripe API', 'Redux'],
+        link: '#',
+        github: '#'
+    },
+    {
+        id: 'taskmanager',
+        title: 'TaskFlow Pro',
+        category: 'Productivity • SaaS',
+        filter: 'web',
+        icon: 'fas fa-tasks',
+        description: 'Advanced task management application with team collaboration features and real-time updates.',
+        fullDescription: 'A powerful task management tool designed for teams, featuring real-time collaboration, project boards, and comprehensive analytics.',
+        features: [
+            'Kanban-style project boards',
+            'Real-time team collaboration',
+            'Task assignments and notifications',
+            'Time tracking and reporting',
+            'Integration with Slack and Google Calendar'
+        ],
+        technologies: ['Vue.js', 'Express', 'PostgreSQL', 'Socket.io', 'Vuex'],
+        link: '#',
+        github: '#'
+    },
+    {
+        id: 'fitness',
+        title: 'FitTrack Mobile',
+        category: 'Health • Fitness',
+        filter: 'mobile',
+        icon: 'fas fa-dumbbell',
+        description: 'Mobile fitness tracking app with workout plans, nutrition tracking, and progress visualization.',
+        fullDescription: 'A comprehensive fitness application that helps users track workouts, monitor nutrition, and visualize their progress with detailed analytics and personalized recommendations.',
+        features: [
+            'Custom workout plan generator',
+            'Calorie and macro tracking',
+            'Exercise library with video tutorials',
+            'Progress photos and measurements',
+            'Social features and challenges'
+        ],
+        technologies: ['React Native', 'Firebase', 'Redux', 'Chart.js', 'Node.js'],
+        link: '#',
+        github: '#'
+    },
+    {
+        id: 'weather',
+        title: 'WeatherNow Dashboard',
+        category: 'Utility • Data Visualization',
+        filter: 'web',
+        icon: 'fas fa-cloud-sun',
+        description: 'Beautiful weather dashboard with detailed forecasts, interactive maps, and weather alerts.',
+        fullDescription: 'An elegant weather application providing detailed forecasts, interactive weather maps, and real-time alerts with stunning visualizations.',
+        features: [
+            '7-day detailed weather forecast',
+            'Interactive radar and satellite maps',
+            'Severe weather alerts',
+            'Air quality index monitoring',
+            'Multiple location tracking'
+        ],
+        technologies: ['React', 'OpenWeather API', 'Mapbox', 'Chart.js', 'Tailwind CSS'],
+        link: '#',
+        github: '#'
+    },
+    {
+        id: 'social',
+        title: 'ConnectHub Social',
+        category: 'Social Media • Networking',
+        filter: 'web',
+        icon: 'fas fa-users',
+        description: 'Modern social networking platform with real-time messaging, posts, and community features.',
+        fullDescription: 'A feature-rich social networking platform that enables users to connect, share content, and build communities with real-time interactions.',
+        features: [
+            'User profiles and customization',
+            'Real-time chat and video calls',
+            'News feed with posts and stories',
+            'Groups and community features',
+            'Privacy controls and blocking'
+        ],
+        technologies: ['Next.js', 'GraphQL', 'PostgreSQL', 'WebRTC', 'Redis'],
+        link: '#',
+        github: '#'
+    },
+    {
+        id: 'language',
+        title: 'LinguaLearn App',
+        category: 'Education • Language',
+        filter: 'mobile',
+        icon: 'fas fa-language',
+        description: 'Interactive language learning mobile app with AI-powered conversation practice and gamification.',
+        fullDescription: 'An innovative language learning platform that uses AI to provide personalized lessons, conversation practice, and gamified learning experiences.',
+        features: [
+            'AI-powered conversation practice',
+            'Adaptive learning algorithms',
+            'Gamified lesson structure',
+            'Speech recognition and pronunciation feedback',
+            'Offline learning mode'
+        ],
+        technologies: ['React Native', 'TensorFlow', 'Firebase', 'OpenAI API', 'SQLite'],
+        link: '#',
+        github: '#'
+    },
+    {
+        id: 'portfolio',
+        title: 'Creative Portfolio Builder',
+        category: 'Tools • Website Builder',
+        filter: 'web',
+        icon: 'fas fa-palette',
+        description: 'No-code portfolio builder for creatives with drag-and-drop interface and beautiful templates.',
+        fullDescription: 'A powerful yet easy-to-use portfolio builder that enables designers, photographers, and artists to create stunning portfolios without coding knowledge.',
+        features: [
+            'Drag-and-drop page builder',
+            '50+ professional templates',
+            'Custom domain support',
+            'SEO optimization tools',
+            'Analytics and visitor tracking'
+        ],
+        technologies: ['React', 'Node.js', 'MongoDB', 'AWS S3', 'Stripe'],
+        link: '#',
+        github: '#'
+    }
+];
+
+// ========================================
+// STATE MANAGEMENT
+// ========================================
+let currentFilter = 'all';
+let displayedProjectsCount = 6;
+const projectsPerLoad = 3;
+
+// ========================================
 // TYPED TEXT EFFECT IN HERO
-// Adjust typingSpeed and erasingSpeed for different animation pace
 // ========================================
 const typedTextElement = document.querySelector('.typed-text');
 const cursorElement = document.querySelector('.cursor-blink');
@@ -14,15 +216,14 @@ const textArray = ['Tech', 'Automation', 'Design', 'AI Tips'];
 let textArrayIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-const typingSpeed = 150; // milliseconds per character
-const erasingSpeed = 100; // milliseconds per character
-const delayBetweenWords = 2000; // pause before erasing
+const typingSpeed = 150;
+const erasingSpeed = 100;
+const delayBetweenWords = 2000;
 
 function typeText() {
     const currentText = textArray[textArrayIndex];
     
     if (!isDeleting) {
-        // Typing
         typedTextElement.textContent = currentText.substring(0, charIndex + 1);
         charIndex++;
         
@@ -32,7 +233,6 @@ function typeText() {
             return;
         }
     } else {
-        // Erasing
         typedTextElement.textContent = currentText.substring(0, charIndex - 1);
         charIndex--;
         
@@ -46,10 +246,47 @@ function typeText() {
     setTimeout(typeText, speed);
 }
 
-// Start typing effect on page load
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(typeText, 500);
+// ========================================
+// SCROLL PROGRESS BAR
+// ========================================
+function updateScrollProgress() {
+    const scrollProgress = document.getElementById('scroll-progress');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+    scrollProgress.style.width = scrollPercent + '%';
+}
+
+window.addEventListener('scroll', updateScrollProgress);
+
+// ========================================
+// THEME TOGGLE (LIGHT/DARK MODE)
+// ========================================
+const themeToggle = document.getElementById('theme-toggle');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Check for saved theme preference or default to 'dark'
+const currentTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', currentTheme);
+updateThemeIcon(currentTheme);
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
 });
+
+function updateThemeIcon(theme) {
+    const icon = themeToggle.querySelector('i');
+    if (theme === 'dark') {
+        icon.className = 'fas fa-sun';
+    } else {
+        icon.className = 'fas fa-moon';
+    }
+}
 
 // ========================================
 // MOBILE NAVIGATION TOGGLE
@@ -58,21 +295,18 @@ const navMenu = document.getElementById('nav-menu');
 const navToggle = document.getElementById('nav-toggle');
 const navClose = document.getElementById('nav-close');
 
-// Open menu
 if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('active');
     });
 }
 
-// Close menu
 if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('active');
     });
 }
 
-// Close menu when clicking on nav links
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -107,8 +341,32 @@ function activeNavOnScroll() {
 window.addEventListener('scroll', activeNavOnScroll);
 
 // ========================================
+// HERO CARD 3D TILT EFFECT ON MOUSEMOVE
+// ========================================
+const heroCard = document.getElementById('hero-card');
+
+if (heroCard) {
+    heroCard.addEventListener('mousemove', (e) => {
+        const rect = heroCard.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = ((y - centerY) / centerY) * 15; // Adjust tilt amount (15 degrees)
+        const rotateY = ((x - centerX) / centerX) * 15;
+        
+        heroCard.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    });
+    
+    heroCard.addEventListener('mouseleave', () => {
+        heroCard.style.transform = '';
+    });
+}
+
+// ========================================
 // INTERSECTION OBSERVER FOR REVEAL ANIMATIONS
-// Adjust threshold (0.15) for earlier/later animation trigger
 // ========================================
 const revealElements = document.querySelectorAll('[data-reveal]');
 
@@ -116,8 +374,6 @@ const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('revealed');
-            // Optional: unobserve after reveal to prevent re-triggering
-            // revealObserver.unobserve(entry.target);
         }
     });
 }, {
@@ -130,7 +386,7 @@ revealElements.forEach(element => {
 });
 
 // ========================================
-// ANIMATED COUNTER FOR STATS
+// ANIMATED COUNTER FOR STATS (Enhanced)
 // ========================================
 const statNumbers = document.querySelectorAll('.stat-number');
 let hasAnimated = false;
@@ -148,15 +404,15 @@ const statsObserver = new IntersectionObserver((entries) => {
     threshold: 0.5
 });
 
-const aboutStats = document.querySelector('.about-stats');
-if (aboutStats) {
-    statsObserver.observe(aboutStats);
+const statsSection = document.getElementById('stats-section');
+if (statsSection) {
+    statsObserver.observe(statsSection);
 }
 
 function animateCounter(element) {
     const target = parseInt(element.getAttribute('data-count'));
-    const duration = 2000; // Animation duration in milliseconds
-    const increment = target / (duration / 16); // 60fps
+    const duration = 2000;
+    const increment = target / (duration / 16);
     let current = 0;
     
     const updateCounter = () => {
@@ -173,12 +429,87 @@ function animateCounter(element) {
 }
 
 // ========================================
-// PROJECT CARD TILT EFFECT ON HOVER
-// Adjust tiltAmount for more/less tilt (currently 10)
+// RENDER PROJECTS DYNAMICALLY
 // ========================================
-const projectCards = document.querySelectorAll('.project-card');
+function renderProjects() {
+    const projectsGrid = document.getElementById('projects-grid');
+    projectsGrid.innerHTML = '';
+    
+    const filteredProjects = currentFilter === 'all' 
+        ? allProjects 
+        : allProjects.filter(p => p.filter === currentFilter);
+    
+    const projectsToShow = filteredProjects.slice(0, displayedProjectsCount);
+    
+    projectsToShow.forEach((project, index) => {
+        const projectCard = createProjectCard(project, index);
+        projectsGrid.appendChild(projectCard);
+    });
+    
+    // Update load more button visibility
+    updateLoadMoreButton(filteredProjects.length);
+    
+    // Reattach observers to new elements
+    observeProjectCards();
+}
 
-projectCards.forEach(card => {
+function createProjectCard(project, index) {
+    const card = document.createElement('article');
+    card.className = 'project-card glass-card';
+    card.setAttribute('data-reveal', '');
+    card.setAttribute('data-project', project.id);
+    
+    card.innerHTML = `
+        <div class="project-image">
+            <div class="project-image-placeholder">
+                <i class="${project.icon}"></i>
+            </div>
+            <div class="project-overlay">
+                <button class="btn-icon" aria-label="View ${project.title} details">
+                    <i class="fas fa-eye"></i>
+                </button>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-header">
+                <h3 class="project-title">${project.title}</h3>
+                <span class="project-category">${project.category}</span>
+            </div>
+            <p class="project-description">
+                ${project.description}
+            </p>
+            <div class="project-tags">
+                ${project.technologies.slice(0, 3).map(tech => 
+                    `<span class="tag">${tech}</span>`
+                ).join('')}
+            </div>
+        </div>
+    `;
+    
+    // Add click handler
+    card.addEventListener('click', (e) => {
+        if (!e.target.closest('.btn-icon')) {
+            openModal(project.id);
+        }
+    });
+    
+    // Add overlay button handler
+    const overlayBtn = card.querySelector('.btn-icon');
+    overlayBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openModal(project.id);
+    });
+    
+    // Add tilt effect
+    addTiltEffect(card);
+    
+    return card;
+}
+
+// ========================================
+// PROJECT CARD TILT EFFECT ON HOVER
+// ========================================
+function addTiltEffect(card) {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -187,7 +518,7 @@ projectCards.forEach(card => {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
         
-        const tiltAmount = 10; // degrees
+        const tiltAmount = 5;
         const rotateY = ((x - centerX) / centerX) * tiltAmount;
         const rotateX = ((centerY - y) / centerY) * tiltAmount;
         
@@ -197,7 +528,55 @@ projectCards.forEach(card => {
     card.addEventListener('mouseleave', () => {
         card.style.transform = '';
     });
+}
+
+function observeProjectCards() {
+    const projectCards = document.querySelectorAll('.project-card[data-reveal]');
+    projectCards.forEach(card => {
+        revealObserver.observe(card);
+    });
+}
+
+// ========================================
+// PROJECT FILTERING
+// ========================================
+const filterButtons = document.querySelectorAll('.filter-btn');
+
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Update active button
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // Update filter and reset count
+        currentFilter = btn.getAttribute('data-filter');
+        displayedProjectsCount = 6;
+        
+        // Re-render projects
+        renderProjects();
+    });
 });
+
+// ========================================
+// LOAD MORE PROJECTS
+// ========================================
+const loadMoreBtn = document.getElementById('load-more-projects');
+
+if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+        displayedProjectsCount += projectsPerLoad;
+        renderProjects();
+    });
+}
+
+function updateLoadMoreButton(totalProjects) {
+    const loadMoreSection = document.querySelector('.projects-load-more');
+    if (displayedProjectsCount >= totalProjects) {
+        loadMoreSection.style.display = 'none';
+    } else {
+        loadMoreSection.style.display = 'block';
+    }
+}
 
 // ========================================
 // PROJECT MODAL SYSTEM
@@ -207,84 +586,11 @@ const modalOverlay = document.getElementById('modal-overlay');
 const modalClose = document.getElementById('modal-close');
 const modalBody = document.getElementById('modal-body');
 
-// Project data
-const projectData = {
-    nursechat: {
-        title: 'NurseChat',
-        category: 'Healthcare • Education',
-        description: 'NurseChat is a comprehensive collaborative platform designed specifically for nursing students. It combines real-time chat functionality with an integrated flashcard system to enhance learning and communication.',
-        features: [
-            'Real-time messaging with WebSocket technology',
-            'Interactive flashcard system for study sessions',
-            'Group chat rooms for different nursing topics',
-            'Progress tracking and study analytics',
-            'Mobile-responsive design for on-the-go learning'
-        ],
-        technologies: ['React', 'Firebase', 'WebSocket', 'Material-UI', 'Redux'],
-        link: '#',
-        github: '#'
-    },
-    cropmac: {
-        title: 'Cropmac Website',
-        category: 'Business • E-commerce',
-        description: 'A modern, professional company website for Cropmac featuring comprehensive service showcases, integrated booking flows, and an intuitive user experience.',
-        features: [
-            'Service catalog with detailed descriptions',
-            'Integrated booking and appointment system',
-            'Admin dashboard for managing bookings',
-            'Responsive design across all devices',
-            'SEO-optimized content and structure'
-        ],
-        technologies: ['PHP', 'HTML5', 'CSS3', 'JavaScript', 'MySQL'],
-        link: '#',
-        github: '#'
-    },
-    digitalmind: {
-        title: 'Digital Mind',
-        category: 'Content • YouTube',
-        description: 'Digital Mind is a faceless YouTube channel focused on delivering high-quality tech and AI content. The project involves automated script generation, visual creation, and content optimization.',
-        features: [
-            'Automated script generation using AI',
-            'Custom visual design for faceless content',
-            'SEO-optimized video titles and descriptions',
-            'Consistent content scheduling and publishing',
-            'Analytics tracking and performance optimization'
-        ],
-        technologies: ['Content Creation', 'AI/GPT', 'Video Editing', 'Automation Tools', 'Python'],
-        link: '#',
-        github: '#'
-    }
-};
-
-// Open modal when clicking project cards
-projectCards.forEach(card => {
-    card.addEventListener('click', (e) => {
-        // Don't open if clicking the overlay button directly
-        if (e.target.closest('.btn-icon')) {
-            e.stopPropagation();
-        }
-        
-        const projectId = card.getAttribute('data-project');
-        openModal(projectId);
-    });
-});
-
-// Also handle overlay button clicks
-document.querySelectorAll('.project-overlay .btn-icon').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const card = e.target.closest('.project-card');
-        const projectId = card.getAttribute('data-project');
-        openModal(projectId);
-    });
-});
-
 function openModal(projectId) {
-    const project = projectData[projectId];
+    const project = allProjects.find(p => p.id === projectId);
     
     if (!project) return;
     
-    // Build modal content
     let featuresHTML = project.features.map(feature => 
         `<li>${feature}</li>`
     ).join('');
@@ -299,7 +605,7 @@ function openModal(projectId) {
             ${project.category}
         </p>
         <p style="line-height: 1.8; margin-bottom: 1.5rem;">
-            ${project.description}
+            ${project.fullDescription}
         </p>
         <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Key Features</h3>
         <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; line-height: 1.8; color: var(--text-secondary);">
@@ -323,8 +629,6 @@ function openModal(projectId) {
     
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
-    
-    // Focus on close button for accessibility
     modalClose.focus();
 }
 
@@ -333,39 +637,32 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
-// Close modal handlers
 modalClose.addEventListener('click', closeModal);
 modalOverlay.addEventListener('click', closeModal);
 
-// Close modal with Escape key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
         closeModal();
     }
 });
 
-// Trap focus within modal when open
-modal.addEventListener('keydown', (e) => {
-    if (e.key === 'Tab') {
-        const focusableElements = modal.querySelectorAll(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        const firstElement = focusableElements[0];
-        const lastElement = focusableElements[focusableElements.length - 1];
-        
-        if (e.shiftKey && document.activeElement === firstElement) {
-            e.preventDefault();
-            lastElement.focus();
-        } else if (!e.shiftKey && document.activeElement === lastElement) {
-            e.preventDefault();
-            firstElement.focus();
-        }
-    }
-});
+// ========================================
+// TOAST NOTIFICATION SYSTEM
+// ========================================
+const toast = document.getElementById('toast');
+
+function showToast(message, duration = 3000) {
+    const toastMessage = document.getElementById('toast-message');
+    toastMessage.textContent = message;
+    toast.classList.add('show');
+    
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, duration);
+}
 
 // ========================================
 // DOWNLOAD README FUNCTIONALITY
-// Generates and downloads a README.md file
 // ========================================
 const downloadReadmeBtn = document.getElementById('download-readme');
 
@@ -373,6 +670,7 @@ if (downloadReadmeBtn) {
     downloadReadmeBtn.addEventListener('click', () => {
         const readmeContent = generateReadmeContent();
         downloadFile('README.md', readmeContent);
+        showToast('README.md downloaded successfully! 📄');
     });
 }
 
@@ -391,26 +689,19 @@ I specialize in:
 
 ## Featured Projects
 
-### 1. NurseChat
-A collaborative chat platform with integrated flashcards for nursing students.
+${allProjects.map((project, index) => `
+### ${index + 1}. ${project.title}
+${project.fullDescription}
 
-**Technologies:** React, Firebase, WebSocket
-
-### 2. Cropmac Website
-Professional company website with booking flows and service showcase.
-
-**Technologies:** PHP, HTML/CSS, MySQL
-
-### 3. Digital Mind
-Faceless YouTube channel creating tech and AI content with automation.
-
-**Technologies:** Content Creation, AI/GPT, Automation
+**Technologies:** ${project.technologies.join(', ')}
+`).join('\n')}
 
 ## Skills
 
 - **Frontend:** React, Vue.js, HTML5, CSS3, JavaScript
 - **Backend:** Node.js, PHP, Python
-- **Database:** MongoDB, MySQL, Firebase
+- **Database:** MongoDB, MySQL, Firebase, PostgreSQL
+- **Mobile:** React Native
 - **Tools:** Git, Docker, VS Code
 - **Other:** AI/ML, Automation, Content Creation
 
@@ -447,9 +738,9 @@ function downloadFile(filename, content) {
 }
 
 // ========================================
-// FORM SUBMISSION HANDLER
+// FORM SUBMISSION HANDLER WITH TOAST
 // ========================================
-const contactForm = document.querySelector('.contact-form');
+const contactForm = document.getElementById('contact-form');
 
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -461,11 +752,10 @@ if (contactForm) {
         const subject = formData.get('subject');
         const message = formData.get('message');
         
-        // In a real application, send this data to your backend
         console.log('Form submitted:', { name, email, subject, message });
         
-        // Show success message
-        alert('Thank you for your message! I will get back to you soon. 🚀');
+        // Show success toast
+        showToast('Message sent successfully! I\'ll get back to you soon. 🚀');
         
         // Reset form
         contactForm.reset();
@@ -474,7 +764,6 @@ if (contactForm) {
 
 // ========================================
 // SMOOTH SCROLL ENHANCEMENT
-// Already handled by CSS scroll-behavior, but adding programmatic fallback
 // ========================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -497,7 +786,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // HEADER BACKGROUND ON SCROLL
 // ========================================
 const header = document.getElementById('header');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
@@ -509,18 +797,16 @@ window.addEventListener('scroll', () => {
         header.style.background = 'rgba(15, 23, 36, 0.8)';
         header.style.boxShadow = 'none';
     }
-    
-    lastScroll = currentScroll;
 });
 
 // ========================================
 // BUTTON RIPPLE EFFECT
-// Adds a visual ripple when clicking buttons
 // ========================================
-document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', function(e) {
+document.addEventListener('click', function(e) {
+    if (e.target.closest('.btn')) {
+        const button = e.target.closest('.btn');
         const ripple = document.createElement('span');
-        const rect = this.getBoundingClientRect();
+        const rect = button.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
         const x = e.clientX - rect.left - size / 2;
         const y = e.clientY - rect.top - size / 2;
@@ -535,12 +821,12 @@ document.querySelectorAll('.btn').forEach(button => {
         ripple.style.animation = 'ripple 0.6s ease-out';
         ripple.style.pointerEvents = 'none';
         
-        this.appendChild(ripple);
+        button.appendChild(ripple);
         
         setTimeout(() => {
             ripple.remove();
         }, 600);
-    });
+    }
 });
 
 // Ripple animation
@@ -556,35 +842,19 @@ style.textContent = `
 document.head.appendChild(style);
 
 // ========================================
-// PERFORMANCE: LAZY LOADING FOR IMAGES
-// (When images are added to the project)
+// INITIALIZE ON PAGE LOAD
 // ========================================
-const observerOptions = {
-    root: null,
-    rootMargin: '50px',
-    threshold: 0.01
-};
-
-const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const img = entry.target;
-            if (img.dataset.src) {
-                img.src = img.dataset.src;
-                img.classList.add('loaded');
-                imageObserver.unobserve(img);
-            }
-        }
-    });
-}, observerOptions);
-
-// Observe all images with data-src attribute
-document.querySelectorAll('img[data-src]').forEach(img => {
-    imageObserver.observe(img);
+document.addEventListener('DOMContentLoaded', () => {
+    // Start typing effect
+    setTimeout(typeText, 500);
+    
+    // Render initial projects
+    renderProjects();
+    
+    // Initial scroll progress
+    updateScrollProgress();
+    
+    console.log('%c🚀 BigJuu Tech Portfolio Loaded Successfully!', 'color: #ff7a18; font-size: 16px; font-weight: bold;');
+    console.log('%c✨ All 10 projects loaded with advanced features!', 'color: #9aa6b2; font-size: 12px;');
+    console.log('%cBuilt with ❤️ in Accra, Ghana', 'color: #9aa6b2; font-size: 12px;');
 });
-
-// ========================================
-// LOG SUCCESS MESSAGE
-// ========================================
-console.log('%c🚀 BigJuu Tech Portfolio Loaded Successfully!', 'color: #ff7a18; font-size: 16px; font-weight: bold;');
-console.log('%cBuilt with ❤️ in Accra, Ghana', 'color: #9aa6b2; font-size: 12px;');
