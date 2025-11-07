@@ -14,22 +14,18 @@
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scroll-progress"></div>
 
-    <!-- Animated Background Blobs -->
-    <div class="background-blobs" aria-hidden="true">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
-
     <!-- Navigation Header -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav-logo" aria-label="BigJuu Tech Home">
-                <span class="logo-primary">BigJuu</span><span class="logo-accent">Tech</span>
+            <a href="#home" class="nav-logo" aria-label="BigJuu Tech Home">
+                <span class="logo-text">BigJuu<span class="logo-accent">Tech</span></span>
             </a>
             
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
                     <li class="nav-item">
                         <a href="#about" class="nav-link">About</a>
                     </li>
@@ -59,57 +55,97 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Profile Photo -->
     <section class="hero" id="home">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span class="hero-greeting fade-in-up" style="animation-delay: 0.1s">Hi, I'm</span>
-                        <span class="hero-name fade-in-up" style="animation-delay: 0.2s">BigJuu Tech</span>
-                    </h1>
-                    <div class="hero-subtitle fade-in-up" style="animation-delay: 0.3s">
-                        <span class="typed-text"></span>
-                        <span class="cursor-blink">|</span>
-                    </div>
-                    <p class="hero-description fade-in-up" style="animation-delay: 0.4s">
-                        Crafting innovative digital solutions with a focus on automation, 
-                        modern design, and cutting-edge technology. Based in Accra, Ghana 🇬🇭
-                    </p>
-                    <div class="hero-buttons fade-in-up" style="animation-delay: 0.5s">
-                        <a href="#projects" class="btn btn-primary">
-                            <span>See my work</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <span>Hire me</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="hero-greeting fade-in" style="animation-delay: 0.1s">
+                            <span class="wave">👋</span> Hello, I'm
+                        </p>
+                        <h1 class="hero-title fade-in" style="animation-delay: 0.2s">
+                            BigJuu Tech
+                        </h1>
+                        <div class="hero-subtitle fade-in" style="animation-delay: 0.3s">
+                            <span class="typed-text"></span>
+                            <span class="cursor-blink">|</span>
+                        </div>
+                        <p class="hero-description fade-in" style="animation-delay: 0.4s">
+                            A passionate Full-Stack Developer and Tech Innovator based in Accra, Ghana 🇬🇭. 
+                            I build modern web applications with cutting-edge technologies and creative solutions.
+                        </p>
+                        
+                        <div class="hero-stats fade-in" style="animation-delay: 0.5s">
+                            <div class="stat-item">
+                                <span class="stat-value">5+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">50+</span>
+                                <span class="stat-label">Projects Done</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">100+</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                        </div>
 
-            <!-- Hero Card with 3D Tilt -->
-            <div class="hero-card glass-card tilt-card fade-in-left" style="animation-delay: 0.3s" id="hero-card">
-                <div class="hero-card-avatar">
-                    <div class="avatar-wrapper">
-                        <i class="fas fa-user-astronaut"></i>
+                        <div class="hero-buttons fade-in" style="animation-delay: 0.6s">
+                            <a href="#projects" class="btn btn-primary">
+                                <span>View Projects</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#contact" class="btn btn-outline">
+                                <span>Contact Me</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="status-indicator"></div>
                 </div>
-                <h3 class="hero-card-name">BigJuu Tech</h3>
-                <p class="hero-card-tagline">Full-Stack Developer & Tech Innovator</p>
-                <div class="hero-card-location">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Accra, Ghana</span>
-                </div>
-                <div class="hero-card-skills">
-                    <span class="skill-badge">React</span>
-                    <span class="skill-badge">Node.js</span>
-                    <span class="skill-badge">AI/ML</span>
-                    <span class="skill-badge">Automation</span>
+
+                <!-- Profile Photo Section -->
+                <div class="hero-image-wrapper fade-in" style="animation-delay: 0.3s">
+                    <div class="hero-image-container">
+                        <!-- Add your photo here by replacing the src attribute -->
+                        <!-- <img src="your-photo.jpg" alt="BigJuu Tech" class="hero-image"> -->
+                        
+                        <!-- Placeholder - Remove this div when you add your photo -->
+                        <div class="hero-image-placeholder">
+                            <i class="fas fa-user"></i>
+                            <p class="placeholder-text">Your Photo Here</p>
+                        </div>
+                        
+                        <div class="image-decoration">
+                            <div class="decoration-circle decoration-1"></div>
+                            <div class="decoration-circle decoration-2"></div>
+                            <div class="decoration-circle decoration-3"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tech Stack Icons -->
+                    <div class="tech-stack">
+                        <div class="tech-icon" title="React">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="tech-icon" title="Node.js">
+                            <i class="fab fa-node"></i>
+                        </div>
+                        <div class="tech-icon" title="JavaScript">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="tech-icon" title="Python">
+                            <i class="fab fa-python"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Background Elements -->
+        <div class="hero-background">
+            <div class="bg-circle bg-circle-1"></div>
+            <div class="bg-circle bg-circle-2"></div>
+            <div class="bg-circle bg-circle-3"></div>
         </div>
     </section>
 
@@ -117,56 +153,110 @@
     <section class="section about-section" id="about">
         <div class="container">
             <div class="section-header" data-reveal>
-                <span class="section-label">Get to know me</span>
-                <h2 class="section-title">About Me</h2>
-                <p class="section-description">
-                    I'm a passionate developer and tech enthusiast specializing in building 
-                    modern web applications and automation solutions.
-                </p>
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">Crafting Digital Experiences</h2>
+                <div class="title-line"></div>
             </div>
 
             <div class="about-content">
-                <div class="about-stats" data-reveal id="stats-section">
-                    <div class="stat-card glass-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <h3 class="stat-number" data-count="50">0</h3>
-                        <p class="stat-label">Projects Completed</p>
-                    </div>
-                    <div class="stat-card glass-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="stat-number" data-count="100">0</h3>
-                        <p class="stat-label">Happy Clients</p>
-                    </div>
-                    <div class="stat-card glass-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3 class="stat-number" data-count="5">0</h3>
-                        <p class="stat-label">Years Experience</p>
-                    </div>
-                </div>
+                <div class="about-grid">
+                    <div class="about-text" data-reveal>
+                        <h3>Hello! I'm BigJuu Tech</h3>
+                        <p>
+                            I'm a Full-Stack Developer specializing in building exceptional digital experiences. 
+                            Currently, I'm focused on building accessible, human-centered products using modern 
+                            technologies and best practices.
+                        </p>
+                        <p>
+                            With over 5 years of experience in web development, I've worked on projects ranging 
+                            from healthcare platforms to e-commerce solutions, always striving to deliver 
+                            high-quality, scalable applications.
+                        </p>
+                        <p>
+                            When I'm not coding, you'll find me exploring new technologies, contributing to 
+                            open-source projects, or creating content about tech and AI on my Digital Mind channel.
+                        </p>
 
-                <div class="about-text glass-card" data-reveal>
-                    <h3>Building the Future, One Line at a Time</h3>
-                    <p>
-                        With expertise in full-stack development, I transform ideas into 
-                        reality through clean code and innovative solutions. My journey in 
-                        tech has been driven by curiosity and a desire to solve real-world problems.
-                    </p>
-                    <p>
-                        From building collaborative platforms for healthcare professionals to 
-                        creating engaging content for tech education, I'm constantly exploring 
-                        new technologies and pushing boundaries.
-                    </p>
-                    <div class="about-actions">
-                        <button class="btn btn-accent" id="download-readme">
+                        <div class="about-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Location</strong>
+                                    <p>Accra, Ghana</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email</strong>
+                                    <p>you@example.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-briefcase"></i>
+                                <div>
+                                    <strong>Status</strong>
+                                    <p>Available for Opportunities</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary" id="download-readme">
                             <i class="fas fa-download"></i>
-                            <span>Download README</span>
+                            <span>Download CV</span>
                         </button>
+                    </div>
+
+                    <div class="skills-container" data-reveal>
+                        <h3>Technical Skills</h3>
+                        
+                        <div class="skill-category">
+                            <h4>Frontend Development</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Vue.js</span>
+                                <span class="skill-tag">Next.js</span>
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">TypeScript</span>
+                                <span class="skill-tag">Tailwind CSS</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Backend Development</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Express</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">PHP</span>
+                                <span class="skill-tag">REST API</span>
+                                <span class="skill-tag">GraphQL</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Database & Tools</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">Firebase</span>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">Docker</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Other Skills</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">AI/ML</span>
+                                <span class="skill-tag">Automation</span>
+                                <span class="skill-tag">UI/UX Design</span>
+                                <span class="skill-tag">SEO</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,27 +267,40 @@
     <section class="section projects-section" id="projects">
         <div class="container">
             <div class="section-header" data-reveal>
-                <span class="section-label">My work</span>
+                <span class="section-label">Portfolio</span>
                 <h2 class="section-title">Featured Projects</h2>
+                <div class="title-line"></div>
                 <p class="section-description">
-                    Here are some of my recent projects that showcase my skills and passion for development.
+                    Here are some of my recent projects showcasing my expertise in web development
                 </p>
             </div>
 
             <!-- Project Filters -->
             <div class="project-filters" data-reveal>
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="web">Web Apps</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="content">Content</button>
+                <button class="filter-btn active" data-filter="all">
+                    <span>All</span>
+                    <span class="filter-count" id="count-all">10</span>
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <span>Web Apps</span>
+                    <span class="filter-count" id="count-web">7</span>
+                </button>
+                <button class="filter-btn" data-filter="mobile">
+                    <span>Mobile</span>
+                    <span class="filter-count" id="count-mobile">2</span>
+                </button>
+                <button class="filter-btn" data-filter="content">
+                    <span>Content</span>
+                    <span class="filter-count" id="count-content">1</span>
+                </button>
             </div>
 
             <div class="projects-grid" id="projects-grid">
-                <!-- Projects will be dynamically loaded by JavaScript -->
+                <!-- Projects will be dynamically loaded -->
             </div>
 
             <div class="projects-load-more" data-reveal>
-                <button class="btn btn-secondary" id="load-more-projects">
+                <button class="btn btn-outline" id="load-more-projects">
                     <span>Load More Projects</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
@@ -209,72 +312,61 @@
     <section class="section services-section" id="services">
         <div class="container">
             <div class="section-header" data-reveal>
-                <span class="section-label">What I offer</span>
-                <h2 class="section-title">Services</h2>
+                <span class="section-label">Services</span>
+                <h2 class="section-title">What I Do</h2>
+                <div class="title-line"></div>
                 <p class="section-description">
-                    Comprehensive solutions tailored to bring your digital vision to life.
+                    I provide a wide range of services to help bring your ideas to life
                 </p>
             </div>
 
             <div class="services-grid">
-                <div class="service-card glass-card" data-reveal>
-                    <div class="service-icon floating">
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3 class="service-title">Web Development</h3>
-                    <p class="service-description">
-                        Full-stack web applications built with modern technologies and best practices.
-                    </p>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and performant web applications using modern frameworks and best practices.</p>
                 </div>
 
-                <div class="service-card glass-card" data-reveal>
-                    <div class="service-icon floating">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="service-title">Automation</h3>
-                    <p class="service-description">
-                        Streamline workflows and boost productivity with custom automation solutions.
-                    </p>
-                </div>
-
-                <div class="service-card glass-card" data-reveal>
-                    <div class="service-icon floating">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3 class="service-title">UI/UX Design</h3>
-                    <p class="service-description">
-                        Beautiful, intuitive interfaces that users love and businesses need.
-                    </p>
-                </div>
-
-                <div class="service-card glass-card" data-reveal>
-                    <div class="service-icon floating">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="service-title">AI Integration</h3>
-                    <p class="service-description">
-                        Leverage AI and machine learning to enhance your applications.
-                    </p>
-                </div>
-
-                <div class="service-card glass-card" data-reveal>
-                    <div class="service-icon floating">
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 class="service-title">Mobile Apps</h3>
-                    <p class="service-description">
-                        Responsive mobile applications for iOS and Android platforms.
-                    </p>
+                    <h3>Mobile Apps</h3>
+                    <p>Creating cross-platform mobile applications with React Native for iOS and Android.</p>
                 </div>
 
-                <div class="service-card glass-card" data-reveal>
-                    <div class="service-icon floating">
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Designing beautiful and intuitive user interfaces that provide excellent user experiences.</p>
+                </div>
+
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Automation</h3>
+                    <p>Streamlining workflows and processes through intelligent automation solutions.</p>
+                </div>
+
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Integration</h3>
+                    <p>Implementing AI and machine learning features to enhance application capabilities.</p>
+                </div>
+
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="service-title">Consulting</h3>
-                    <p class="service-description">
-                        Strategic tech consulting to help scale and optimize your business.
-                    </p>
+                    <h3>Consulting</h3>
+                    <p>Providing expert technical consultation to help you make informed technology decisions.</p>
                 </div>
             </div>
         </div>
@@ -284,56 +376,62 @@
     <section class="section contact-section" id="contact">
         <div class="container">
             <div class="section-header" data-reveal>
-                <span class="section-label">Let's connect</span>
-                <h2 class="section-title">Get In Touch</h2>
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <div class="title-line"></div>
                 <p class="section-description">
-                    Have a project in mind? Let's work together to create something amazing.
+                    Have a project in mind? Let's discuss how I can help bring your vision to life
                 </p>
             </div>
 
             <div class="contact-content">
                 <div class="contact-info" data-reveal>
-                    <div class="contact-card glass-card">
+                    <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h3>Email</h3>
-                        <a href="mailto:you@example.com">you@example.com</a>
+                        <p>you@example.com</p>
+                        <a href="mailto:you@example.com" class="contact-link">Send a message</a>
                     </div>
 
-                    <div class="contact-card glass-card">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>+233 XX XXX XXXX</p>
+                        <a href="tel:+233XXXXXXXXX" class="contact-link">Call me</a>
+                    </div>
+
+                    <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h3>Location</h3>
                         <p>Accra, Ghana</p>
-                    </div>
-
-                    <div class="contact-card glass-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>Availability</h3>
-                        <p>Open to opportunities</p>
+                        <span class="contact-link">Available Remotely</span>
                     </div>
                 </div>
 
-                <form class="contact-form glass-card" data-reveal id="contact-form">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" name="name" class="form-input" required>
+                <form class="contact-form" data-reveal id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-input" required>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Discussion" required>
                     </div>
                     <div class="form-group">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" id="subject" name="subject" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" rows="5" class="form-input" required></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-full">
                         <span>Send Message</span>
@@ -343,17 +441,20 @@
             </div>
 
             <div class="social-links" data-reveal>
-                <a href="#" class="social-link" aria-label="GitHub">
+                <a href="#" class="social-link" aria-label="GitHub" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="#" class="social-link" aria-label="LinkedIn">
+                <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="#" class="social-link" aria-label="Twitter">
+                <a href="#" class="social-link" aria-label="Twitter" title="Twitter">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#" class="social-link" aria-label="Instagram">
+                <a href="#" class="social-link" aria-label="Instagram" title="Instagram">
                     <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="YouTube" title="YouTube">
+                    <i class="fab fa-youtube"></i>
                 </a>
             </div>
         </div>
@@ -362,15 +463,30 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 BigJuu Tech. All rights reserved.</p>
-            <p>Designed & Built with <span class="accent-text">passion</span> in Accra, Ghana</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">BigJuu<span class="logo-accent">Tech</span></span>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BigJuu Tech. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> in Accra, Ghana</p>
+            </div>
         </div>
     </footer>
 
     <!-- Project Modal -->
     <div class="modal" id="project-modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
         <div class="modal-overlay" id="modal-overlay"></div>
-        <div class="modal-content glass-card">
+        <div class="modal-content">
             <button class="modal-close" id="modal-close" aria-label="Close modal">
                 <i class="fas fa-times"></i>
             </button>
@@ -383,7 +499,7 @@
     <!-- Toast Notification -->
     <div class="toast" id="toast">
         <i class="fas fa-check-circle"></i>
-        <span id="toast-message">Message sent successfully!</span>
+        <span id="toast-message">Success!</span>
     </div>
 
     <script src="app.js"></script>
